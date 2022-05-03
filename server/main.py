@@ -18,7 +18,7 @@ from PolicyHolder import PolicyHolder
 app = FastAPI()
 
 #3. Load the  model pickle file into our app
-pickle_in = open("medical_cost_prediction_model.pickle","rb")
+pickle_in = open("../model/medical_cost_prediction_model.pickle","rb")
 
 #4. Initialize our linear regression model
 regressor = pickle.load(pickle_in)
