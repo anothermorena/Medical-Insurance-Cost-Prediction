@@ -1,6 +1,6 @@
 import Form from "./Form";
 import SideImage from "../micp.jpg";
-import { Box, useColorModeValue, Icon, Image,Text} from "@chakra-ui/react";
+import { Box, useColorModeValue, Icon, Image} from "@chakra-ui/react";
 
 const Hero = () => {
   const bg = useColorModeValue("white", "gray.800");

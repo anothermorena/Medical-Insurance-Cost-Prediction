@@ -24,8 +24,7 @@ const Form = () => {
             const response = await axios.post(PREDICTION_URL,
                 JSON.stringify({ age, sex,bmi,children,smoker,region }),
                 {
-                    headers: { 'Content-Type': 'application/json' },
-                    withCredentials: true
+                    headers: { 'Content-Type': 'application/json' }
                 }
             );
             const predicted_cost = response?.data?.predicted_cost;

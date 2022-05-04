@@ -8,7 +8,7 @@ Created on Wed May 2 11:08:51 2022
 
 #pip install fastapi uvicorn pickle in your virtual environment
 
-# 1. Library imports
+#1. Library imports
 import pickle
 import uvicorn ##ASGI
 from fastapi import FastAPI
@@ -69,6 +69,7 @@ async def predict_medical_insurance_cost(data:PolicyHolder):
     smoker = data['smoker']
     region = data['region']
 
+
     predicted_cost = regressor.predict([[age,sex,bmi,children,smoker,region]])
 
     #the above returns the cost as an array. Taking the 0th index value will give it back as an individual float or integer value
@@ -78,7 +79,7 @@ async def predict_medical_insurance_cost(data:PolicyHolder):
 
 
 #7. Run the API with uvicorn
-#    Will run on http://127.0.0.1:8000
+#   Will run on http://127.0.0.1:8000
 if __name__ == '__main__':
     uvicorn.run(app, host='127.0.0.1', port=8000)
     
