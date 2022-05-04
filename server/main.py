@@ -12,10 +12,25 @@ Created on Wed May 2 11:08:51 2022
 import pickle
 import uvicorn ##ASGI
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from PolicyHolder import PolicyHolder
 
 #2. Create the app object
 app = FastAPI()
+
+#add cross origin resource sharing
+#these origins are the urls we want our api/backend to allow requests from
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 #3. Load the  model pickle file into our app
 pickle_in = open("../model/medical_cost_prediction_model.pickle","rb")
@@ -25,14 +40,14 @@ regressor = pickle.load(pickle_in)
 
 #5. Index route, opens automatically on http://127.0.0.1:8000
 @app.get('/')
-def index():
+async def index():
     return {'message': 'Hello Machine Learning 😁'}
 
 
 #6. Expose the prediction functionality, make a prediction from the passed
 #   JSON data and return the predicted medical insurance cost/charge
 @app.post('/predict')
-def predict_medical_insurance_cost(data:PolicyHolder):
+async def predict_medical_insurance_cost(data:PolicyHolder):
 
     """
         ## Making a prediction requires the following:
@@ -58,7 +73,7 @@ def predict_medical_insurance_cost(data:PolicyHolder):
 
     #the above returns the cost as an array. Taking the 0th index value will give it back as an individual float or integer value
     return {
-        'predicted_cost': predicted_cost[0]   
+        'predicted_cost': round(predicted_cost[0], 2) #round the number to two decimal places 
     }
 
 

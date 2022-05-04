@@ -1,1 +1,8 @@
+#jupyter notebook checkpoints
 /model/.ipynb_checkpoints
+
+#environments
+/server/venv/
+
+#caches
+/server/__pycache__/
