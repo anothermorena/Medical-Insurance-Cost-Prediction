@@ -2,5 +2,5 @@ In this project we are going to predict what is the medical insurance cost of a 
 
 An Otsogile Ogaisitse Onalepelo aka Morena Project.
 
-Age, Sex, Bmi, Children, Smoker, Region were the features used for training the regression model. Then it is served via a FastAPI microservice and consumed by a React Js client.
+Age, Sex(Gender), Bmi(Body Mass Index), Children(number of dependents an insurance policy holder has), Smoker(Whether thee person smokes or not), Region(The region the person is from) were the features used for training the regression model. Then it is served via a FastAPI microservice and consumed by a React Js client.
 
