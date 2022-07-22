@@ -6,3 +6,6 @@
 
 #caches
 /server/__pycache__/
+
+#node modules
+/client/node_modules/

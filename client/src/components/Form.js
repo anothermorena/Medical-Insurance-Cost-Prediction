@@ -3,8 +3,7 @@ import {useState} from 'react'
 import axios from '../api/axios';
 import FieldGuide from './FieldGuide';
 import ResultsModal from './ResultsModal';
-import { MdCheckCircle } from 'react-icons/md'
-import {Button, Text, Input} from '@chakra-ui/react';
+import {Button, Text, Input,Box} from '@chakra-ui/react';
 
 //The api end point we need to call to make our predictions 
 const PREDICTION_URL = '/predict';
@@ -52,16 +51,15 @@ const Form = () => {
 
   return (
    <form onSubmit={handleSubmit}>
-       {/* If we got a cost prediction from our api display it */}
        {prediction && <ResultsModal prediction={prediction}/>}
 
-       {/*If something went sideways in our attempt to make a prediction,show the user an error message*/}
        {errMsg && <Alert errMsg={errMsg} />}
 
-       <FieldGuide />
-       
-       {/*Insurance Policy Holder Form Fields*/}
-        <Text mb='8px'>Age: </Text>
+       <Box mr={{'2xl':10}}>
+
+       {!errMsg && <FieldGuide />}
+
+       <Text mb='8px'>Age: </Text>
         <Input
             value={age}
             type="number"
@@ -133,6 +131,8 @@ const Form = () => {
             max='3'
         /> 
         <Button type="submit" mt={5}>Predict</Button>
+       </Box>
+        
    </form>
   )
 }

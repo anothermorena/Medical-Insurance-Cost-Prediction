@@ -3,7 +3,7 @@ import {Text,Box,ListItem,List, ListIcon} from '@chakra-ui/react';
 
 const FieldGuide = () => {
   return (
-    <Box mt={-20} mb={5}>
+    <Box mt={{base:-10, md:-20}}  mb={5}>
         <Text>Field Tips & Guide:</Text>
         <List spacing={3}>
         <ListItem>

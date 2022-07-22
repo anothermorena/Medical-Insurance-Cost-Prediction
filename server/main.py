@@ -12,8 +12,8 @@ Created on Wed May 2 11:08:51 2022
 import pickle
 import uvicorn ##ASGI
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from PolicyHolder import PolicyHolder
+from fastapi.middleware.cors import CORSMiddleware
 
 #2. Create the app object
 app = FastAPI()
