@@ -1,5 +1,5 @@
-import { chakra, Box, Icon, Flex, useColorModeValue } from "@chakra-ui/react";
 import { BsLightningFill } from "react-icons/bs";
+import { chakra, Box, Icon, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const Alert = ({errMsg}) => {
   return (

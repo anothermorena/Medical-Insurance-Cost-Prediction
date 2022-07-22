@@ -1,7 +1,7 @@
-import {chakra,HStack,Flex,IconButton,useColorModeValue,useColorMode,Text} from "@chakra-ui/react";
-import { useViewportScroll } from "framer-motion";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { useViewportScroll } from "framer-motion";
 import {useEffect, useState, useRef} from "react";
+import {chakra,HStack,Flex,IconButton,useColorModeValue,useColorMode,Text} from "@chakra-ui/react";
 
 const Header = () => {
   const { toggleColorMode: toggleMode } = useColorMode();

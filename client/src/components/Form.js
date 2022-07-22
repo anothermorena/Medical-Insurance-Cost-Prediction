@@ -1,7 +1,9 @@
 import Alert from './Alert';
 import {useState} from 'react'
 import axios from '../api/axios';
+import FieldGuide from './FieldGuide';
 import ResultsModal from './ResultsModal';
+import { MdCheckCircle } from 'react-icons/md'
 import {Button, Text, Input} from '@chakra-ui/react';
 
 //The api end point we need to call to make our predictions 
@@ -56,6 +58,8 @@ const Form = () => {
        {/*If something went sideways in our attempt to make a prediction,show the user an error message*/}
        {errMsg && <Alert errMsg={errMsg} />}
 
+       <FieldGuide />
+       
        {/*Insurance Policy Holder Form Fields*/}
         <Text mb='8px'>Age: </Text>
         <Input
@@ -128,8 +132,7 @@ const Form = () => {
             min='0'
             max='3'
         /> 
-        <br/><br/><br/>
-        <Button type="submit" >Predict</Button>
+        <Button type="submit" mt={5}>Predict</Button>
    </form>
   )
 }

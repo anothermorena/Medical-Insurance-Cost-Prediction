@@ -65,7 +65,7 @@ const Footer = () => {
           </chakra.a>
 
           <chakra.a
-            href="https://github.com/anothermorena"
+            href="https://github.com/anothermorena/Medical-Insurance-Cost-Prediction"
             target="_blank"
             m={2}
             color="gray.600"
