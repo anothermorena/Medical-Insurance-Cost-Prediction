@@ -1,4 +1,4 @@
-import {FaLinkedin,FaGithub, FaPeopleCarry} from "react-icons/fa";
+import {FaLinkedin,FaGithub} from "react-icons/fa";
 import { chakra, Flex, Icon, useColorModeValue } from "@chakra-ui/react";
 
 const Footer = () => {
