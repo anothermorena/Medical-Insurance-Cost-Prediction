@@ -14,13 +14,16 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-      //register our service worker
-      //first check if the service worker is supported by the browser we are using
+      /*
+        register our service worker
+        first check if the service worker is supported by the browser we are using
+      */
       if("serviceWorker" in navigator) {
-       //if the above its true then we can register the service worker. 
-       //we listen for the load event and then call a call back function
+       /*
+        if the above its true then we can register the service worker. 
+        we listen for the load event and then call a call back function
+       */
        window.addEventListener("load", () => {
-         // this enables us to create our own service worker
           navigator.serviceWorker.register("./serviceworker.js")
           .then((reg) => {
             console.log("Success: ", reg.scope);//reg.scope shows us the url at which our serviceworker was installed
