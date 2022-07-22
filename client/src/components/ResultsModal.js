@@ -14,7 +14,6 @@ const ResultsModal = ({prediction}) => {
                     The predicted medical insurance cost is ${prediction}  
                 </Text>
             </ModalBody>
-  
             <ModalFooter>
               <Button variant='ghost' onClick={onClose}>Close</Button>
             </ModalFooter>
