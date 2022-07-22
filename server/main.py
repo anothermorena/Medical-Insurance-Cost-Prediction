@@ -19,7 +19,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 #add cross origin resource sharing
-#these origins are the urls we want our api/backend to allow requests from
+#origins are the urls we want our api/backend to allow requests from
 origins = [
     "http://localhost",
     "http://localhost:3000",
