@@ -1,4 +1,15 @@
-import {Text,Button,Modal,ModalOverlay,ModalContent,ModalHeader,ModalFooter,ModalBody,ModalCloseButton,useDisclosure } from '@chakra-ui/react'
+import
+ {Text,
+  Modal,
+  Button,
+  ModalBody,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  ModalContent,
+  useDisclosure, 
+  ModalCloseButton,
+} from '@chakra-ui/react'
 
 const ResultsModal = ({prediction}) => {
     const { isOpen, onClose } = useDisclosure({ defaultIsOpen: true })

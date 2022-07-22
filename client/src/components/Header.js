@@ -11,7 +11,6 @@ const Header = () => {
   const ref = useRef();
   const [y, setY] = useState(0);
   const { height = 0 } = ref.current ? ref.current.getBoundingClientRect() : {};
-
   const { scrollY } = useViewportScroll();
 
   useEffect(() => {
