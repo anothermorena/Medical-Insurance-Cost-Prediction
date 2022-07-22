@@ -46,24 +46,10 @@ const Footer = () => {
           color="gray.800"
           _dark={{ color: "white" }}
         >
-          All the copyrights jibi jaba should go here 😆
+          Made with love 🖤
         </chakra.p>
 
         <Flex mx="-2">
-          <chakra.a
-            href="#"
-            target="_blank"
-            m={2}
-            color="gray.600"
-            _dark={{ color: "gray.300", _hover: { color: "gray.400" } }}
-            _hover={{
-              color: "gray.500",
-            }}
-            aria-label="Hire Me"
-          >
-            <Icon as={FaPeopleCarry} boxSize="5" viewBox="0 0 24 24" fill="currentColor" />
-          </chakra.a>
-
           <chakra.a
             href="https://www.linkedin.com/in/bwooo/"
             target="_blank"
