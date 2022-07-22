@@ -44,6 +44,7 @@ const Header = () => {
             <Text fontSize='4xl' color="gray.400">Medical Insurance Cost Prediction</Text>
             </HStack>
           </Flex>
+          
           <Flex justify="flex-end" align="center" color="gray.400">
             <Text color="gray.400"  display={{ base: "flex", md: "none" }}>Medical Insurance Cost Prediction</Text>
             <IconButton
