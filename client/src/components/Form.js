@@ -32,7 +32,6 @@ const Form = () => {
                 }
             );
             const predicted_cost = response?.data?.predicted_cost;
-            console.log(predicted_cost);
             setPrediction(predicted_cost);
             
             setAge("");
@@ -44,7 +43,6 @@ const Form = () => {
             setErrMsg("");
            
         } catch (err) {
-            console.log(err.toJSON());
             if (!err?.response) {
                 setErrMsg('No Server Response.');
             } else {
