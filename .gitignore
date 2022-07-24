@@ -9,3 +9,6 @@
 
 #node modules
 /client/node_modules/
+
+#production app
+/client/build/

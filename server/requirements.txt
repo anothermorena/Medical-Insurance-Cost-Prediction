@@ -1,3 +1,11 @@
 pickle
 uvicorn
 fastapi
+gunicorn
+uvloop
+httptools
+numpy
+pandas
+matplotlib
+seaborn
+sklearn
