@@ -3,7 +3,7 @@ import {useState} from 'react'
 import axios from '../api/axios';
 import FieldGuide from './FieldGuide';
 import ResultsModal from './ResultsModal';
-import {Button, Text, Input,Box} from '@chakra-ui/react';
+import {Button, Text, Input,Box,Spinner, Stack} from '@chakra-ui/react';
 
 //The api end point we need to call to make our predictions 
 const PREDICTION_URL = '/predict';
@@ -17,9 +17,12 @@ const Form = () => {
     const [region, setRegion] = useState("");
     const [prediction, setPrediction] = useState("");
     const [errMsg, setErrMsg] = useState("");
+    const [loading, setLoading] = useState(false);
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
 
         try {
             const response = await axios.post(PREDICTION_URL,
@@ -29,6 +32,7 @@ const Form = () => {
                 }
             );
             const predicted_cost = response?.data?.predicted_cost;
+            console.log(predicted_cost);
             setPrediction(predicted_cost);
             
             setAge("");
@@ -40,13 +44,14 @@ const Form = () => {
             setErrMsg("");
            
         } catch (err) {
+            console.log(err.toJSON());
             if (!err?.response) {
-                setErrMsg('No Server Response');
+                setErrMsg('No Server Response.');
             } else {
-                setErrMsg('Making A Prediction Failed');
-            }
-            
+                setErrMsg('Making A Prediction Failed.');
+            }     
         }
+        setLoading(false);
     }
 
   return (
@@ -130,8 +135,26 @@ const Form = () => {
             min='0'
             max='3'
         /> 
-        <Button type="submit" mt={5}>Predict</Button>
-       </Box>
+        <Stack spacing={10} pt={2}>  
+            {loading && (
+              <Button mt={2}>
+                <Spinner
+                  thickness='4px'
+                  speed='0.65s'
+                  emptyColor='gray.200'
+                  color='gray.400'
+                  size='lg'
+                />   
+            </Button> 
+            )}
+
+            {!loading && (
+               <Button type='submit' mt={2}>
+                 Predict
+             </Button> 
+            )}
+        </Stack>
+    </Box>
         
    </form>
   )
