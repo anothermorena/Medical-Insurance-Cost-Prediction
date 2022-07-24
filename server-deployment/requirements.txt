@@ -1,4 +1,3 @@
-pickle
 uvicorn
 fastapi
 gunicorn
