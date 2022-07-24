@@ -1,0 +1,3 @@
+pickle
+uvicorn
+fastapi
