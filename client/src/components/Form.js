@@ -46,7 +46,7 @@ const Form = () => {
             if (!err?.response) {
                 setErrMsg('No Server Response.');
             } else {
-                setErrMsg('Making A Prediction Failed.');
+                setErrMsg('Making A Prediction Failed.Please check your network and try again');
             }     
         }
         setLoading(false);
