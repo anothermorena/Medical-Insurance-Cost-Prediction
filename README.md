@@ -1,7 +1,7 @@
 # Project Summary
-In this project we are going to predict what is the medical insurance cost of a person. This is a regression problem as the target ouput is continous or numeric. Please note that, in real life, different health insurance providers may have different features or data from the one utilized for this project.   
+In this project, we are going to predict what the medical insurance cost of a person would be. This is a regression problem as the target output is continuous or numeric. Please note that, in real life, different health insurance providers may have different features or data from the one utilized for this project.
 
-Age, Sex(Gender), Bmi(Body Mass Index), Children(number of dependents an insurance policy holder has), Smoker(Whether the person smokes or not), Region(The region the person is from) were the features used for training a linear regression model which yield an R2 score of 0.79.  Then it is served via a FastAPI server and consumed by a React JS PWA client.
+Age, Sex (Gender), Bmi (Body Mass Index), Children (number of dependents an insurance policy holder has), Smoker (whether the person smokes or not), and Region (the region the person is from) were the features used for training a linear regression model, which yielded an R2 score of 0.79. Then it is served via a FastAPI server and consumed by a React JS PWA client.
 
 # [App Link](https://micpa.vercel.app)
 
