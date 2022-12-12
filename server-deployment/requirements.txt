@@ -4,4 +4,4 @@ gunicorn
 uvloop
 httptools
 pydantic
-scikit-learn
+scikit-learn==0.24.2
