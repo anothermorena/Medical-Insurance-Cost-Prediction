@@ -4,3 +4,4 @@ gunicorn
 uvloop
 httptools
 pydantic
+scikit-learn
